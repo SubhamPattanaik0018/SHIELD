@@ -1,0 +1,276 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    /* Dark fintech theme always */
+    --background: 0.12 0.028 222;
+    --foreground: 0.97 0.01 220;
+    --card: 0.17 0.035 222;
+    --card-foreground: 0.97 0.01 220;
+    --popover: 0.19 0.035 222;
+    --popover-foreground: 0.97 0.01 220;
+    --primary: 0.72 0.12 186;
+    --primary-foreground: 0.1 0.02 222;
+    --secondary: 0.2 0.04 222;
+    --secondary-foreground: 0.97 0.01 220;
+    --muted: 0.22 0.03 222;
+    --muted-foreground: 0.62 0.03 222;
+    --accent: 0.8 0.15 155;
+    --accent-foreground: 0.1 0.02 222;
+    --destructive: 0.75 0.16 55;
+    --destructive-foreground: 0.1 0.02 222;
+    --border: 0.3 0.04 222;
+    --input: 0.22 0.04 222;
+    --ring: 0.72 0.12 186;
+    --chart-1: 0.72 0.12 186;
+    --chart-2: 0.8 0.15 155;
+    --chart-3: 0.75 0.16 55;
+    --chart-4: 0.65 0.12 265;
+    --chart-5: 0.68 0.14 25;
+    --sidebar: 0.14 0.03 222;
+    --sidebar-foreground: 0.97 0.01 220;
+    --sidebar-primary: 0.72 0.12 186;
+    --sidebar-primary-foreground: 0.1 0.02 222;
+    --sidebar-accent: 0.2 0.04 222;
+    --sidebar-accent-foreground: 0.97 0.01 220;
+    --sidebar-border: 0.3 0.04 222;
+    --sidebar-ring: 0.72 0.12 186;
+  }
+
+  .dark {
+    --background: 0.12 0.028 222;
+    --foreground: 0.97 0.01 220;
+    --card: 0.17 0.035 222;
+    --card-foreground: 0.97 0.01 220;
+    --popover: 0.19 0.035 222;
+    --popover-foreground: 0.97 0.01 220;
+    --primary: 0.72 0.12 186;
+    --primary-foreground: 0.1 0.02 222;
+    --secondary: 0.2 0.04 222;
+    --secondary-foreground: 0.97 0.01 220;
+    --muted: 0.22 0.03 222;
+    --muted-foreground: 0.62 0.03 222;
+    --accent: 0.8 0.15 155;
+    --accent-foreground: 0.1 0.02 222;
+    --destructive: 0.75 0.16 55;
+    --destructive-foreground: 0.1 0.02 222;
+    --border: 0.3 0.04 222;
+    --input: 0.22 0.04 222;
+    --ring: 0.72 0.12 186;
+    --chart-1: 0.72 0.12 186;
+    --chart-2: 0.8 0.15 155;
+    --chart-3: 0.75 0.16 55;
+    --chart-4: 0.65 0.12 265;
+    --chart-5: 0.68 0.14 25;
+    --sidebar: 0.14 0.03 222;
+    --sidebar-foreground: 0.97 0.01 220;
+    --sidebar-primary: 0.72 0.12 186;
+    --sidebar-primary-foreground: 0.1 0.02 222;
+    --sidebar-accent: 0.2 0.04 222;
+    --sidebar-accent-foreground: 0.97 0.01 220;
+    --sidebar-border: 0.3 0.04 222;
+    --sidebar-ring: 0.72 0.12 186;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #05131f 0%, #071a2a 50%, #06101a 100%);
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(18, 35, 52, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(120, 190, 200, 0.18);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  }
+
+  .glass-light {
+    background: rgba(27, 50, 70, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(120, 190, 200, 0.12);
+  }
+
+  .teal-glow {
+    box-shadow: 0 0 20px rgba(33, 198, 183, 0.3), 0 0 60px
+      rgba(33, 198, 183, 0.1);
+  }
+
+  .green-glow {
+    box-shadow: 0 0 20px rgba(63, 224, 142, 0.3), 0 0 60px
+      rgba(63, 224, 142, 0.1);
+  }
+
+  .orange-glow {
+    box-shadow: 0 0 20px rgba(255, 154, 74, 0.3), 0 0 60px
+      rgba(255, 154, 74, 0.1);
+  }
+
+  .text-teal {
+    color: #21c6b7;
+  }
+
+  .text-rain-green {
+    color: #3fe08e;
+  }
+
+  .text-alert-orange {
+    color: #ff9a4a;
+  }
+
+  .bg-teal {
+    background-color: #21c6b7;
+  }
+
+  .bg-rain-green {
+    background-color: #3fe08e;
+  }
+
+  .bg-alert-orange {
+    background-color: #ff9a4a;
+  }
+
+  .gradient-teal {
+    background: linear-gradient(135deg, #21c6b7, #15b7a8);
+  }
+
+  .gradient-green {
+    background: linear-gradient(135deg, #3fe08e, #35d87f);
+  }
+
+  .gradient-orange {
+    background: linear-gradient(135deg, #ff9a4a, #ff7e3d);
+  }
+
+  .gradient-hero-text {
+    background: linear-gradient(135deg, #21c6b7, #3fe08e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .navbar-glass {
+    background: rgba(5, 19, 31, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(120, 190, 200, 0.12);
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(0.8);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2.4);
+      opacity: 0;
+    }
+  }
+
+  @keyframes rain-drop {
+    0% {
+      transform: translateY(-20px) translateX(0);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateY(120px) translateX(-10px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes data-flow {
+    0% {
+      stroke-dashoffset: 1000;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.8s ease-out forwards;
+  }
+
+  .animate-slide-left {
+    animation: slide-in-left 0.8s ease-out forwards;
+  }
+
+  .animate-slide-right {
+    animation: slide-in-right 0.8s ease-out forwards;
+  }
+
+  .rain-drop {
+    animation: rain-drop 1.5s linear infinite;
+  }
+
+  .hex-grid {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='52' viewBox='0 0 60 52'%3E%3Cpath d='M30 0 L60 15 L60 37 L30 52 L0 37 L0 15Z' fill='none' stroke='rgba(33,198,183,0.15)' stroke-width='1'/%3E%3C/svg%3E");
+    background-size: 60px 52px;
+  }
+}
